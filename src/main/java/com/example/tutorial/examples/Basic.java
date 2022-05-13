@@ -13,4 +13,13 @@ public class Basic {
 
         return sum;
     }
+
+    public boolean isTrue(String value){
+        if (value.equals("Y")){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }
