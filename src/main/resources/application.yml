@@ -1,0 +1,11 @@
+resilience4j.retry:
+  instances:
+    hello-retry:
+      maxAttempts: 3
+      waitDuration: 1s
+      enableExponentialBackoff: true
+      exponentialBackoffMultiplier: 2
+      retryExceptions:
+        - java.lang.RuntimeException
+    #  ignoreExceptions:
+     #   - com.jsession4d.samplerest.BusinessException
