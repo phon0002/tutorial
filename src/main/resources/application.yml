@@ -6,6 +6,6 @@ resilience4j.retry:
       enableExponentialBackoff: true
       exponentialBackoffMultiplier: 2
       retryExceptions:
-        - java.io.IOException
+        - java.lang.RuntimeException
     #  ignoreExceptions:
      #   - com.jsession4d.samplerest.BusinessException
