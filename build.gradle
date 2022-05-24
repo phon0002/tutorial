@@ -2,11 +2,40 @@ plugins {
     id 'org.springframework.boot' version '2.6.7'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
+    id 'org.openapi.generator'  version '5.3.0'
 }
+
+apply plugin: "org.openapi.generator"
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
+
+openApiGenerate {
+    generatorName = "spring"
+    inputSpec = "$rootDir/src/main/resources/Helloworld.yaml".toString()
+    outputDir = "$buildDir/gen".toString()
+    apiPackage = "com.example.tutorial"
+    invokerPackage = "com.example.tutorial.invoker"
+    modelPackage = "com.example.tutorial.model"
+    configOptions = [
+            dateLibrary: "java8" ,
+            interfaceOnly: "true"
+
+    ]
+    globalProperties = [
+            modelDocs: "false"
+    ]
+    skipValidateSpec = true
+    logToStderr = true
+    generateAliasAsModel = false
+    // set to true and set environment variable {LANG}_POST_PROCESS_FILE
+    // (e.g. SCALA_POST_PROCESS_FILE) to the linter/formatter to be processed.
+    // This command will be passed one file at a time for most supported post processors.
+    enablePostProcessFile = false
+}
+
+compileJava.dependsOn tasks.openApiGenerate
 
 configurations {
     compileOnly {
