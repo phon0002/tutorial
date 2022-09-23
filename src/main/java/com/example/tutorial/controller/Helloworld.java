@@ -18,6 +18,11 @@ public class Helloworld {
     public @ResponseBody String getHelloworld() {
         return service.getHello();
     }
+
+    @GetMapping(value = "/test", produces = "application/json")
+    public @ResponseBody String test() {
+        return "test3";
+    }
 }
 
 
