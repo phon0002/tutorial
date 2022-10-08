@@ -1,4 +1,4 @@
-package com.example.tutorial.repository;
+package com.tracking.repository;
 
 import lombok.Data;
 

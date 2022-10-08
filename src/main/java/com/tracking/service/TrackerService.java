@@ -1,4 +1,4 @@
-package com.example.tutorial.service;
+package com.tracking.service;
 
 import io.github.resilience4j.retry.annotation.Retry;
 import lombok.extern.log4j.Log4j2;

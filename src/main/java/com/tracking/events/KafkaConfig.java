@@ -1,4 +1,4 @@
-package com.example.tutorial.events;
+package com.tracking.events;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.producer.ProducerConfig;

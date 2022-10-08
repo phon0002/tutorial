@@ -1,4 +1,4 @@
-package com.example.tutorial;
+package com.tracking;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package com.example.tutorial.events;
+package com.tracking.events;
 
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;

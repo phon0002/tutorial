@@ -1,4 +1,4 @@
-package com.example.tutorial.examples;
+package com.tracking.examples;
 
 import java.util.Arrays;
 import java.util.Collections;
