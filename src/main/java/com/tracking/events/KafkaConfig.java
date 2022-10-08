@@ -15,7 +15,7 @@ import java.util.Map;
 
 @Component
 public class KafkaConfig {
-    @Value("server.kafka")
+    @Value("${server.kafka}")
     private String SERVER_URL;
 
     public ProducerFactory<String, String> producerFactory() {
