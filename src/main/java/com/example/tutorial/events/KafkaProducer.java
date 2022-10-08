@@ -28,6 +28,7 @@ public class KafkaProducer {
                 System.out.println("Sent message=[" + payload +
                         "] with offset=[" + result.getRecordMetadata().offset() + "]");
             }
+
             @Override
             public void onFailure(Throwable ex) {
                 System.out.println("Unable to send message=["

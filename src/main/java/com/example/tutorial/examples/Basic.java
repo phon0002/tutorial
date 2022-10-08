@@ -18,18 +18,18 @@ public class Basic {
 
     static class User {
 
-        User(List<Integer> numbers){
+        User(List<Integer> numbers) {
             this.numbers = numbers;
         }
 
         List<Integer> numbers;
 
-        public List<Integer> getNumbers(){
+        public List<Integer> getNumbers() {
             return numbers;
         }
     }
 
-    public void printUsers(List<User> users){
+    public void printUsers(List<User> users) {
         List<Integer> opt = users.stream()
                 .map(user -> user.getNumbers().stream())
                 .flatMap(number -> number.filter(value -> value > 3))
@@ -52,9 +52,10 @@ public class Basic {
         numbers.stream().filter(number -> number > 3).forEach(System.out::println);
     }
 
-    public static void print(Integer n){
-       System.out.println(n);
+    public static void print(Integer n) {
+        System.out.println(n);
     }
+
     public int summation(int n) {
         int sum = 0;
         for (int i = 0; i < n; i++) {

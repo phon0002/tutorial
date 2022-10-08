@@ -1,4 +1,4 @@
-package com.example.tutorial;
+package com.example.tutorial.service;
 
 import io.github.resilience4j.retry.annotation.Retry;
 import lombok.extern.log4j.Log4j2;
@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Log4j2
-public class HelloworldService {
+public class TrackerService {
 
     private static int count = 0;
 
