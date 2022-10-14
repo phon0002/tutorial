@@ -13,7 +13,7 @@ resilience4j.retry:
       exponentialBackoffMultiplier: 2
       retryExceptions:
         - java.lang.RuntimeException
-    #  ignoreExceptions:
-     #   - com.jsession4d.samplerest.BusinessException
+      #  ignoreExceptions:
+      #   - com.jsession4d.samplerest.BusinessException
 server:
-  kafka: "localhost:29092"
+  kafka: "localhost:9092"

@@ -23,6 +23,13 @@ public class KafkaConfig {
         configProps.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, SERVER_URL);
         configProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         configProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
+        //configProps.put(ProducerConfig.ACKS_CONFIG)
+        //configProps.put(ProducerConfig.BATCH_SIZE_CONFIG)
+        //LINGER_MS_CONFIG,REQUEST_TIMEOUT_MS_CONFIG,MAX_REQUEST_SIZE_CONFIG,MAX_BLOCK_MS_CONFIG
+        //COMPRESSION_TYPE_CONFIG, MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION
+        //PARTITIONER_CLASS_CONFIG
+        //ENABLE_IDEMPOTENCE_CONFIG, TRANSACTION_TIMEOUT_CONFIG, TRANSACTIONAL_ID_CONFIG
+
         return new DefaultKafkaProducerFactory<>(configProps);
     }
 
