@@ -45,6 +45,31 @@ public class KafkaConfig {
         props.put(ConsumerConfig.GROUP_ID_CONFIG, "baeldung");
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
+        /**
+         * max.poll.interval.ms
+         * session.timeout.ms
+         * heartbeat.interval.ms
+         * bootstrap.servers
+         * enable.auto.commit.
+         * auto.commit.interval.ms
+         * auto.offset.reset - defaultValue: latest, {latest, earliest, none}
+         * fetch.min.bytes
+         * fetch.max.bytes
+         *
+         * retry.backoff.ms
+         * reconnect.backoff.ms
+         *
+         * metrics.log.level
+         * request.timeout.ms
+         *
+         * allow.auto.create.topics - defaultValue: true
+         * Isolation.level
+         *
+         * partition.assignment.strategy
+         * - Assigns partitions
+         * - Guarantees an assignmen
+         * - Sticky Assignor
+         */
         return new DefaultKafkaConsumerFactory<>(props);
     }
 
