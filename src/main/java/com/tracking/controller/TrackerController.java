@@ -4,6 +4,7 @@ import com.tracking.service.TrackerService;
 import com.tracking.events.KafkaProducer;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -14,7 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class TrackerController {
 
+    @Autowired
     private TrackerService service;
+    @Autowired
     private KafkaProducer producer;
 
     @GetMapping(value = "/helloworld", produces = "application/json")

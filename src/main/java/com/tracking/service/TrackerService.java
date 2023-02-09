@@ -20,11 +20,11 @@ public class TrackerService {
 
     @Retry(name = "hello-retry")
     public String getHello() {
-        if (count < 5) {
-            log.error("Test" + count);
-            count++;
-            throw new RuntimeException("File Not Found.");
-        }
+        //if (count < 5) {
+        //    log.error("Test" + count);
+         //   count++;
+          //  throw new RuntimeException("File Not Found.");
+        //}
 
         return "Hello world!";
     }
