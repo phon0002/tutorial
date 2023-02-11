@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="DEBUG">
     <Appenders>
-        <!--
+
         <Console name="LogToConsole" target="SYSTEM_OUT">
             <PatternLayout pattern="test - %d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </Console>
+
+        <!--
+       <JsonLayout name="LogToConsole" complete="false" compact="false">
+           <KeyValuePair key="myCustomField" value="myCustomValue" />
+       </JsonLayout>
         -->
-        <JsonLayout name="LogToConsole" complete="false" compact="false">
-            <KeyValuePair key="myCustomField" value="myCustomValue" />
-        </JsonLayout>
     </Appenders>
     <Loggers>
         <Root level="error">
