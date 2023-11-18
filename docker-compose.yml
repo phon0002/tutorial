@@ -6,15 +6,16 @@ services:
       - SYS_NICE
     restart: always
     environment:
-      - MYSQL_DATABASE=admin
+      - MYSQL_DATABASE=gogz
       - MYSQL_ROOT_PASSWORD=password
     ports:
       - '3306:3306'
     expose:
       - '3306'
+    command: --init-file /docker-entrypoint-initdb.d/init.sql
     volumes:
       - db:/var/lib/mysql
-      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./db/createDatabase.sql:/docker-entrypoint-initdb.d/init.sql
 
   redis:
     image: "redis:alpine"

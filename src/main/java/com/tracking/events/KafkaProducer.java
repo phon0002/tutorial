@@ -11,10 +11,6 @@ import org.springframework.util.concurrent.ListenableFutureCallback;
 @Component
 @Slf4j
 public class KafkaProducer {
-
-    @Autowired
-    private KafkaTemplate<String, String> kafkaTemplate;
-
     public void send(String topic, String payload) {
         log.info("sending payload='{}' to topic='{}'", payload, topic);
 
@@ -36,4 +32,7 @@ public class KafkaProducer {
             }
         });
     }
+    @Autowired
+    private KafkaTemplate<String, String> kafkaTemplate;
+
 }

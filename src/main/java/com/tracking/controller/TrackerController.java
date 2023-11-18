@@ -19,12 +19,9 @@ import reactor.core.publisher.Flux;
 @AllArgsConstructor
 public class TrackerController {
 
-    @Autowired
     private TrackerService service;
-    @Autowired
     private KafkaProducer producer;
 
-    @Autowired
     private GreetingClient client;
 
     @GetMapping(value = "/helloworld", produces = "application/json")
