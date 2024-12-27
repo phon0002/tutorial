@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.cache.RedisCacheManagerBuilderCust
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.redis.cache.RedisCacheConfiguration;
 import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
 import org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory;
@@ -21,7 +20,6 @@ import java.util.Map;
 @Configuration
 @EnableRedisRepositories(basePackages = "com.tutorial.repo")
 @ComponentScan
-@PropertySource("classpath:application.properties")
 public class RedisConfig {
 
     @Bean
