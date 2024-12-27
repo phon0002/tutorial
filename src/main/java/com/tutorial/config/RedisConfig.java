@@ -19,8 +19,8 @@ import java.time.Duration;
 import java.util.Map;
 
 @Configuration
-@EnableRedisRepositories(basePackages = "com.example")
-@ComponentScan("com.example")
+@EnableRedisRepositories(basePackages = "com.tutorial.repo")
+@ComponentScan
 @PropertySource("classpath:application.properties")
 public class RedisConfig {
 
