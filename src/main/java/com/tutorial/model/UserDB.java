@@ -1,4 +1,4 @@
-package com.tracking.model;
+package com.tutorial.model;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;

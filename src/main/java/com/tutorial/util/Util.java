@@ -1,4 +1,4 @@
-package com.tracking.util;
+package com.tutorial.util;
 
 import com.github.javafaker.Faker;
 import org.apache.kafka.clients.admin.AdminClient;
